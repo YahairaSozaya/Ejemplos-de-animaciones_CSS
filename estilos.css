@@ -1,0 +1,324 @@
+body{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap:100px;
+    width:100vw;
+    height: 100vh;
+    margin: 0px;
+    padding:100px;
+    box-sizing: border-box;
+    background-color: #dbfdf5;
+}
+
+.box{
+    width: 100%;
+    height: 100%;
+}
+
+.box1{
+    animation:transicionar 5s infinite;
+}
+
+.box2{
+    animation: colores 5s infinite;
+}
+
+.box3{
+    animation: circulo 4s infinite;
+}
+
+
+.box4{
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
+    height: 100%;   
+    grid-gap: 20px; 
+}
+
+.box4_item{
+    height: 100%;
+    animation: barras 5s infinite;
+    border:1px solid black;
+}
+
+.box5{
+    background: cadetblue;
+    width: 100%;
+    height: 100%;
+    position:relative;
+}
+
+.box5:before{
+    content: "";
+    background: rgb(102, 98, 98);
+    height: 100%;
+    position:absolute;
+    animation:loading 5s infinite;
+}
+
+.box6{
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: violet;
+    animation: circuloGrande 5s infinite;
+    justify-self: center;
+    align-self: center;
+}
+
+.box7{
+    border-top-color: red;
+    border-right-color: blue;
+    border-bottom-color: green;
+    border-left-color: blue;
+    border-style: solid;
+    border-width: 5px;
+    animation:bordes 5s infinite;
+}
+
+.box8{
+    padding:0 60px 0 60x;
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap:10px;
+    transform:rotate(180deg);
+}
+
+.item{
+    border:1px solid black;
+}
+
+.box8_item1{
+    height: 0;
+    background-color: rgb(57, 231, 144);
+    animation: barra1 2s infinite;
+}
+
+.box8_item2{
+    height: 50%;
+    background-color: rgb(57, 231, 144);
+    animation: barra2 2s infinite;
+}
+
+.box8_item3{
+    height: 100%;
+    background-color: rgb(57, 231, 144);
+    animation: barra3 2s infinite;
+}
+
+@keyframes transicionar {
+    from {
+        height: 0;
+        background: rgb(102, 46, 139);
+    }
+    to {
+        opacity:1;
+        height: 100%; 
+        background: slateblue;
+    }
+}
+
+@keyframes colores {
+    0% {
+        height: 0;
+        width: 0; 
+        background: rgb(219, 25, 12);
+        animation:linear;
+    }
+
+    25% {
+        height: 50%;
+        width: 50%; 
+        background: rgb(112, 219, 12);
+        animation:linear;
+    }
+
+    50% {
+        height: 100%;
+        width: 100%;
+        background: rgb(12, 219, 191);
+        animation:linear;
+    }
+
+    75% {
+        height: 50%;
+        width: 50%;
+        background: rgb(50, 12, 219);
+        animation:linear;
+    }
+
+    100% {
+        height: 0;
+        width: 0;
+        background: rgb(219, 12, 150);
+        animation:linear;
+    }
+}
+
+@keyframes circulo {
+    0% {
+        border: 5px solid red;
+        background: tomato;
+    }
+
+    50% {
+        border: 5px green dotted;
+        border-radius: 50%;
+        background: turquoise;
+    }
+
+    100% {
+        border: 5px solid red;
+        background: tomato;
+        border-radius: 0px;
+    }
+}
+
+@keyframes barras {
+    0% {
+        opacity:0;
+        height: 0;
+        background-color: cadetblue;
+    }
+
+    50% {
+        opacity:1;
+        height: 100%;
+        background-color: chartreuse;
+    }
+
+    100% {
+        opacity: 0;
+        height: 0;
+        background-color: cadetblue;
+    }
+}
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+@keyframes circuloGrande {
+    25% {
+        width: 50%;
+        height: 50%;
+        background-color: violet;
+        animation:linear;
+    }
+
+    50% {
+        width: 100%;
+        height: 100%;
+        background-color: brown;
+        animation: linear;
+    }
+}
+
+@keyframes bordes {
+    0% {
+        border-top-color: red;
+        border-right-color: blue;
+        border-bottom-color: green;
+        border-left-color: blue;
+    }
+
+    50% {
+        border-top-color: blue;
+        border-right-color: red;
+        border-bottom-color: blue;
+        border-left-color: green;
+    }
+}
+
+@keyframes barra1 {
+    0% {
+        height: 0;
+        animation: linear;
+    }
+
+    25% {
+        height: 50%;
+        animation: linear;
+    }
+
+    50% {
+        height: 100%;
+        animation: linear;
+    }
+
+    75% {
+        height: 50%;
+        animation: linear;
+    }
+
+    100% {
+        height: 0;
+        animation: linear;
+    }
+}
+
+@keyframes barra2 {
+    0% {
+        height: 50%;
+        animation: linear;
+    }
+
+    25% {
+        height: 100%;
+        animation: linear;
+    }
+
+    50% {
+        height: 50%;
+        animation: linear;
+    }
+
+    75% {
+        height: 0;
+        animation: linear;
+    }
+
+    100% {
+        height: 50%;
+        animation: linear;
+    }
+}
+
+@keyframes barra3 {
+    0% {
+        height: 100%;
+        animation: linear;
+    }
+
+    25% {
+        height: 50%;
+        animation: linear;
+    }
+
+    50% {
+        height: 0%;
+        animation: linear;
+    }
+
+    75% {
+        height: 50%;
+        animation: linear;
+    }
+
+    100% {
+        height: 100%;
+        animation: linear;
+    }
+}
